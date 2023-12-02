@@ -142,6 +142,6 @@ def process_file(filepath):
     return total
 
 # Datei verarbeiten
-total_sum = process_file('../dateien/aoc1_2.txt')
+total_sum = process_file('../../dateien/aoc1_2.txt')
 print(f"Total sum: {total_sum}")
 

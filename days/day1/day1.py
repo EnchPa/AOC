@@ -6,7 +6,7 @@
 
 
 
-with open('../dateien/aoc1.txt', 'r') as file:
+with open('../../dateien/aoc1_1.txt', 'r') as file:
     datei = file.readlines()
 
 numbers = 0
