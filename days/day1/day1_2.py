@@ -121,15 +121,16 @@ number_words = {
 
 # Funktion, um das erste und letzte Zahlwort oder Ziffer in einer Zeile zu finden
 def find_numbers(line):
-    # Regex, um Zahlenwörter oder einzelne Ziffern zu finden (case-insensitive)
-    matches = re.findall(r'(?i)\b(one|two|three|four|five|six|seven|eight|nine|\d)\b', line)
+    # Regex, um Zahlenwörter oder Ziffern zu finden (case-insensitive)
+    matches = re.findall(r'(?i)(one|two|three|four|five|six|seven|eight|nine|\d+)', line)
     if matches:
-        # Umwandlung des ersten und letzten Matches in Ziffern
-        start = number_words.get(matches[0].lower(), matches[0])
-        end = number_words.get(matches[-1].lower(), matches[-1])
-        print(f"start: {start} end: {end}")
-        # Wenn nur ein Match vorhanden ist, wird es verdoppelt
-        return start + end if len(matches) > 1 else start * 2
+        # Wenn nur eine Zahl vorhanden ist, wird sie als erste und letzte Zahl verwendet
+        if len(matches) == 1:
+            return number_words.get(matches[0].lower(), matches[0]) * 2
+        else:
+            start = number_words.get(matches[0].lower(), matches[0])
+            end = number_words.get(matches[-1].lower(), matches[-1])
+            return start + end
     return "0"
 
 # Datei lesen und Zahlen verarbeiten
@@ -142,6 +143,5 @@ def process_file(filepath):
     return total
 
 # Datei verarbeiten
-total_sum = process_file('../../dateien/aoc1_2.txt')
+total_sum = process_file('../dateien/aoc1_2.txt')
 print(f"Total sum: {total_sum}")
-
