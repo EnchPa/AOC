@@ -3,7 +3,7 @@
 import re
 
 numbers = 0
-special_chars = "*#'?=)-_:,;(/&@%$§!^°{[]}"
+special_chars = "*#'?=)(/&%$§!^°{}[]+-*/<>!,'\";:?_#@&$%^\\|~"
 
 def process_lines(lines):
     number = 0
