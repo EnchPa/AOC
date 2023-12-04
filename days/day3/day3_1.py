@@ -25,7 +25,7 @@ def process_lines(lines):
                 print(f"start: {start}, end: {end}, nummer: {number1}, total: {number} symbols_front: {symbols_front}, symbols_back: {symbols_back}")
                 my_little_bool = True
             if previous_line and not my_little_bool:
-                start_index = max(start - 2, 0)
+                start_index = max(start - 1, 0)
                 end_index = min(end + 1, len(previous_line))
                 for char in previous_line[start_index:end_index]:
                     if char in special_chars:
@@ -34,7 +34,7 @@ def process_lines(lines):
                         print(f"start: {start}, end: {end}, nummer: {number2}, total: {number}")
                         my_little_bool = True
             if next_line and not my_little_bool:
-                start_index = max(start - 2, 0)
+                start_index = max(start - 1, 0)
                 end_index = min(end + 1, len(next_line))
                 for char in next_line[start_index:end_index]:
                     if char in special_chars:
