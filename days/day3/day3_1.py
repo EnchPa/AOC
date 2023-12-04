@@ -12,5 +12,7 @@ def process_file(lines):
         for match in matches:
             symbols_front = line[match:match-1]
             symbols_back = line[match+1:match+2]
-            if symbols_front in "*#'?=)(/&%$§!^°{[]}"
+            if symbols_front in "*#'?=)(/&%$§!^°{[]}":
+                print("")
+
 
