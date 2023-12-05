@@ -28,6 +28,7 @@ def process_lines(lines):
                 number1 = line[start:end]
                 print("nummber1: " + number1)
                 number += number1
+                # help?
                 print(f"start: {start}, end: {end}, nummer: {number1}, total: {number} symbols_front: {symbols_front}, symbols_back: {symbols_back}")
                 my_little_bool = True
             if previous_line and not my_little_bool:
