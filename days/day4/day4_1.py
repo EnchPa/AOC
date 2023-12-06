@@ -2,7 +2,6 @@
 # The first match makes the card worth one point and each match after the first doubles the point value of that card.
 # that formula: 2^(number of matches - 1)
 import re
-import numpy as np
 
 reg = r"(\d+)"
 
