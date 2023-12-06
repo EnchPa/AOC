@@ -20,7 +20,6 @@ def cardpoints(lines):
 
         if number > 0:
             total = 2 ** (number - 1)
-            print(f"total: {total}")
         else:
             total = 0
         complete += total
