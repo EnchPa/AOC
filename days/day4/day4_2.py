@@ -33,17 +33,16 @@ def cardpoints(lines):
 
         if treffer > 0:
             amount_cards = array_eintrag + 1
-            ergebnis = treffer
             anzahl_eintraege = array_eintrag
             for i in range(anzahl_eintraege+1):
-                karten_array.append(ergebnis)
+                karten_array.append(treffer)
         else:
             amount_cards = array_eintrag + 1
         complete_amount_cards += amount_cards
 
 
 
-        print(f"complete_amount of cards: {complete_amount_cards}, Menge Karten line {x+1}: {amount_cards}, treffer: {treffer}, anzahl weitere Karten linie {x+1}: {ergebnis} durch: {treffer} treffer mal {array_eintrag} karten im array")
+        #print(f"complete_amount of cards: {complete_amount_cards}, Menge Karten line {x+1}: {amount_cards}, treffer: {treffer}, anzahl weitere Karten linie {x+1}: {ergebnis} durch: {treffer} treffer mal {array_eintrag} karten im array")
     #print(f" karten_array: {karten_array}")
     return complete_amount_cards
 
